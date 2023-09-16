@@ -22,4 +22,7 @@ def monthly_challenge(reques, month):
         challengeText = "This is march"
     else:
         return HttpResponseNotFound("This month is not supported!")
-    return HttpResponse(challengeText)
+    return HttpResponse(challengeText)\
+
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
