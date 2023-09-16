@@ -26,7 +26,7 @@ def index(request):
 
     for month in months:
         capital_month = month.upper()
-        month_path = reverse("month-challenge", args=[month]) 
+        month_path = reverse("month-challenge", args=[month]) # month-challenge is defined in url path in urls.py
         list_items+= f"<li><a href=\"{month_path}\">{capital_month}</a></li>"
     
     response_data = f"<ul>{list_items}</ul>"
