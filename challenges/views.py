@@ -53,7 +53,7 @@ def monthly_challenge_by_number(request, month):
         months = list(monthly_challenges.keys())
         redirect_month = months[month-1]
         redirect_path = reverse("month-challenge", args=[redirect_month]) # challenge/january
-        return HttpResponseRedirect("/challenges/" + redirect_month)
+        return HttpResponseRedirect(redirect_path)
     except:
         return HttpResponseNotFound("This is not a supported month")
     
